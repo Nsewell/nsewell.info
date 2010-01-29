@@ -1,4 +1,4 @@
-require 'nsewell'
+require 'hello'
 
 # :views => '/views'
 ## There is no need to set directories here anymore;
