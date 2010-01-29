@@ -1,0 +1,11 @@
+!!! xml
+%urlset{:xmlns => "http://www.sitemaps.org/schemas/sitemap/0.9"}
+  %url
+    %loc http://blog.joshprice.com/
+    %priority 1.0
+    %changefreq daily
+  - @articles.each do |article|
+    %url
+      %loc== http://blog.joshprice.com/#{article.slug}
+      %priority 0.6
+      %changefreq monthly

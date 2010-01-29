@@ -1,0 +1,20 @@
+.article
+  .title
+    %h2
+      %a{ :href => @article.slug, :title => @article.title } 
+        = @article.title
+    %span
+      posted
+      %span.date= @article.published.strftime("%A, %d %B %Y")
+    %span.post-author.vcard
+      by
+      %span.fn Josh Price
+
+  .body
+    = haml @article.template, :layout => false
+
+  .tags
+    %a{ :href => @article.slug, :title => @article.title } Permalink
+      
+    %span= @article.tags
+

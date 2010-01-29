@@ -1,0 +1,86 @@
+@import base.sass
+ 
++blueprint
+
+body
+  :background #fff url(../images/bg.png) repeat-x
+
+a, a:visited
+  :color #579
+  :text-decoration none
+
+a:hover
+  :color #979
+
+pre, code, tt
+  :font-family "lucida console", monospace
+  :background #444
+  :color #eee
+  :border 2px solid #888
+  :padding 1em
+
+h2, h3, h4
+  :font-family Georgia, "Times New Roman", times, serif
+  :color #444
+
+.container
+  :background #fff url(../images/bg.png) repeat-x
+  :padding 2em 2em
+  
+.header
+  :margin-bottom 2em
+  h1
+    :margin-bottom 0
+    :font-family Georgia, "Times New Roman", times, serif
+    a
+      :color #666
+      :letter-spacing -1px
+  .subtitle
+    :color #aaa
+    :font-size 125%
+
+.content
+  +column(14)
+  +append(1)
+  
+.sidebar
+  +column(7,true)
+  ul
+    :margin 0
+    :list-style none inside
+    :font-size 120%
+    li
+      :border-bottom 1px dotted #999
+  div
+    :margin-bottom 3em
+  #twitter
+    ul
+      :font-size 95%
+      
+.footer
+  :background #ccc  
+  :border-top 3px solid #aaa
+  :height 60px
+  
+.article
+  :margin-bottom 2em
+  .title
+    :margin-bottom 1em
+    h2
+      :margin-bottom 0
+    span
+      :font-size 85%
+      :color #aaa
+      :font-size 100%
+      :font-weight normal
+    span.date,
+    span.fn
+      :font-weight bold
+      :color #999
+  .body
+    :padding 0 0 1em 0
+    :border-bottom 1px solid #eee
+  .metadata
+    
+    
+  
