@@ -8,7 +8,7 @@
       %span.date= @article.published.strftime("%A, %d %B %Y")
     %span.post-author.vcard
       by
-      %span.fn Nick Sewell
+      %span.fn Josh Price
 
   .body
     = haml @article.template, :layout => false

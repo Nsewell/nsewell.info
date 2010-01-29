@@ -34,9 +34,7 @@
           
         #about
           %h3 About
-          -# %a{:href => 'colophon.haml'}="colophon"
-          I'm a programmer in Sydney.
-          %a{:href => "http://github.com/nsewell"}Github
+          %a{:href => 'colophon.haml'}="colophon"
         
         #twitter
           %h3 Twitter

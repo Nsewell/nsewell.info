@@ -1,0 +1,144 @@
+.message {
+  border: 2px solid #f66;
+  background-color: #f99;
+  padding: 1em;
+  font-weight: bold;
+}
+
+body{
+  background:#fff url(../images/bg.png) repeat-x;
+  border-top:8px solid #4e4e4e;
+  color:#444;
+  font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size:62.5%;
+  line-height:1.5;
+  margin:0;
+  padding:0;
+  text-align:center;
+}
+#wrap{
+  margin:0 auto;
+  text-align:left;
+  width:76em; 
+}
+#content{
+  font-size:1.2em;
+  float:left;
+  padding:1em;
+  width:40em;
+}
+#sidebar{
+  font-size:1.1em;
+  float:right;
+  padding-top:2em;
+  width:20em;
+}
+#header{
+  padding:3em 1em;
+}
+#footer{
+  background:#333;
+  border-top:1px solid #777;
+  color:#888;
+  clear:both;
+  font-size:0.9em;
+  padding:0.5em;
+}
+/*************************************
+ +Hn and p
+ *************************************/
+h1, h2, h3{
+  font-family: Tahoma, Verdana, Arial, Helvetica, sans-serif;
+  font-weight:normal;
+  margin:0;
+}
+#header h1{
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size:3em;
+  margin:0;
+  margin-right:1em;
+}
+#header h1 a{
+  color:#f76408;
+}
+#header h1 a:hover{
+  color:#ac3220;
+}
+#header p{
+  color:#aaa;
+  font-size:1.1em;
+  margin:0;
+  margin-top:-0.5em;
+}
+.entrytitle h2{
+  font-size:2.2em;
+}
+.entrytitle h2 a
+{
+  color:#B4C24B;
+}
+.entrytitle h2 a:hover{
+  color:#58BBEB;
+}
+.entrytitle h3{
+  font-size:1.8em;
+  color:#6F6F6F;
+}
+#sidebar h3{
+  color:#555;
+  font-size:1.5em;
+  margin:1em 0;
+}
+/*************************************
+ +Entry
+ *************************************/
+.entry{
+  margin-bottom:3em;
+}
+
+.entrybody { font-size: 1.2em; }
+
+.entrymeta{
+        margin-top: 2em;
+  font-size:0.9em;
+}
+.postedby{
+  background:#fff url(../images/user.gif) no-repeat;
+  padding:3px;
+  padding-left:20px;
+}
+.filedto{
+  background:#fff url(../images/post.gif) no-repeat;
+  padding:3px;
+  padding-left:20px;
+}
+.commentslink{
+  background:#fff url(../images/packaged.gif) no-repeat;
+  padding:3px;
+  padding-left:20px;
+}
+
+/*************************************
+ +Sidebar
+ *************************************/
+#sidebar ul{
+  list-style-type:none;
+  margin:0;
+  padding:0;
+}
+#sidebar ul li{
+  border-bottom:1px dotted #ddd;
+  margin-bottom:0.3em;
+  padding:0.3em;
+}
+
+/*************************************
+ +Misc
+ *************************************/
+a{
+  color:#579;
+  text-decoration:none;
+}
+a:hover{
+  color:#CC0000;
+}
