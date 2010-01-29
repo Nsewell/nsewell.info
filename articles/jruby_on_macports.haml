@@ -1,0 +1,29 @@
+-# title: JRuby 1.1.6 now available on MacPorts
+-# published: 2009-02-13
+-# tags: development, jruby, ruby, macports
+  
+:markdown
+  
+  I love how easy [MacPorts][macports] makes installing packages on the Mac. If you own a Mac and develop software you are probably already using it. If you don't you should take a look and see what you're missing.
+
+  But sometimes the packages are a little out of date. This happened to me with [Mercurial][hg] when 1.0 was released, and I'm sure it happens to others from time to time. Next time it happens, you might just be able to do something about it...
+
+  Yesterday I reinstalled [JRuby][jruby] from MacPorts but I got version 1.1.5 instead of version 1.1.6 which I was expecting. [Charles Nutter][nutter] suggested via twitter that I chase it up, so I spent the morning trying to get the JRuby port upgraded to the latest version so everyone could share the love.
+
+  Here's what I discovered:
+
+  1. The 1.1.6 port upgrade [ticket][ticket] had been filed a while back but wasn't closed and had apparently fallen through the cracks
+  2. When raising a ticket for a port upgrade attach a unified diff, not the whole portfile (this makes it easy to see what changed). [Follow these steps.][portfile]
+  3. If something is out of date then an email to the [macports-dev][contacts] mailing list will probably ensure it gets done
+
+  I jumped on the MacPorts IRC channel ([#MacPorts][contact]) and the friendly guys gave me the above advice and made the change almost immediately.
+
+  How's that for service?
+  
+  [macports]: http://www.macports.org
+  [hg]: http://www.selenic.com/mercurial
+  [jruby]: http://www.jruby.org
+  [nutter]: http://blog.headius.com
+  [ticket]: https://trac.macports.org/ticket/17699
+  [portfile]: http://guide.macports.org/#development.patches.portfile
+  [contact]: http://www.macports.org/contact.php

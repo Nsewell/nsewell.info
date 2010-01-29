@@ -1,0 +1,76 @@
+-# title: State Aware Documentation
+-# published: 2009-04-04
+
+:textile
+  h1. State Aware Parts
+
+  h2. The basics
+
+  h3. What is a Part?
+
+  A Part is a state aware object which wraps a specific group of fields in the page.
+
+  A Part defines which fields it wraps using jQuery selectors. A part is instantiated once per page and from then on the fields should be referenced through the part's field name rather than any jQuery selector directly. This allows us to encapsulate the fields and prevents us from wiring up fields in many different places causing confusion.
+
+  h3. Defining a Part
+
+  Parts are fairly straightforward to create.
+
+  @  function SimplePart(container) {
+      StateAware.call(this, container);
+
+      this.setupModelFields({
+        year:  "#year",
+        make:  "#make",
+        model: "#model"
+      });
+    }@
+
+  This sets up a part with *year*, *make* and *model* fields which reference the jQuery elements specified by the selector string provided.
+
+  @  var part = new SimplePart();  
+    // container argument is optional (will be document object if missing)
+
+    part.year;    #=> $('#year')
+    part.make;    #=> $('#make')
+    part.model;   #=> $('#model')@
+
+  h3. So what is a StateAware object?
+
+  The state aware behaviour takes care of storing the fields for you, allowing you to reference fields by name rather than using a jQuery selector.  This means you should use:
+
+  @simplePart.year@ rather than @$(#year)@
+
+  This ensures that we ask jQuery to search the DOM only once upon creation of the part. From then on we reference all fields through the part, including event binding, getting/setting values, etc. providing us with better encapsulation.
+
+  h3. Get and Set State on a State Aware Part
+
+  The primary motivation of a state aware part is having an easy way to set and retrieve the part's state. This occurs through the standard methods getState() and setState().  State can be set in the following way
+
+  h4. setState() takes an object literal
+
+  @  part.setState({
+      firstName: "John",
+      lastName:  "Smith",
+      gender:    "M"
+    });
+  @
+
+  h4. getState() returns an object literal
+
+  @  part.getState();
+
+    #=> {
+      firstName: "John",
+      lastName: "Smith",
+      gender: "M"
+    }
+  @
+
+
+  h3. Wiring stuff up
+
+  h2. Advanced topics
+
+  h3. Derived fields
+
