@@ -1,0 +1,16 @@
+-# title: Howling a Night Away
+-# published: 2009-10-17 16:30
+
+:textile
+  Beckoned by the full moon, we yell, we laugh & we drink. We are playing Werewolf, the psychological party game. Having met up 3 times now, it's been great fun but I wanted to -lure- entice some newcomers. I'd been haphazardly "publicising it":http://twitter.com/chrislloyd/status/4494438236 via. Twitter, so the other weekend I whipped up "a small site":http://werewolfnight.org to get the word out. I went a little overboard.
+
+  Ever since I first resized the window on "Sliverback's promo site":http://silverbackapp.com I've wanted to do that cool parallax shift effect myself. So, at first, the stars moved when the browser window was resized. "Dave Newman":http://snappyco.de pointed out that because the body width was so small, people didn't have any need to resize their browser and thus miss out on the shiny. Not one to let an effect go to waste, I animated the stars so that it looks like there is a parallax shift. Such a large area moving like that was distracting from the content so I blended it in by lowering the contrast on the stars and by slowing down their movement to below reading speed.
+
+  The logo is set in the beautiful "Linux Libertine":http://en.wikipedia.org/wiki/Linux_Libertine which is conveniently open source. If you want to use non-standard web fonts on your site, the <code>@font-face</code> CSS property is now the de facto standard. Ignoring any potential licensing issues surrounding <code>@font-face</code>, the only problem using it is its _FUC_ (Flash of Unstyled Content). I'm officially renaming FOUC to FUC as I believe it better expresses the emotions surrounding the concept. The FUC is shit.
+
+= figure 'werewolf-detail.jpg', :caption => 'Detail of sleeps until the next full moon.'
+
+:textile
+  Following another suggestion from Dave (seriously, hire the man), the picuture of the moon is the current moon and below it is the number of days until the next full moon. I tried calculating the moon phase information using the @astro/moon@ gem, a port of Perl's @Astro::MoonPhase@ module. I really _don't_ recommend @astro/moon@ if you, uh, ever need moon phase information in an app, though. As the author precariously notes "I don't know how it all works". I ended up calling the excellent service provided by "trynt.com":http://www.trynt.com to get the phase information. Tyrnt strangely doesn't support JSONP calls so I used "RestClient":http://github.com/adamwiggins/rest-client to scrape the service then re-publish it locally at "/phase.json":http://werewolfnight.org/phase.json. Also, calling this from Javascript sidestepped any timezone messiness, which was handy.
+  
+  It's a shame that these details will _not_ motivate people to come to the meetups. That doesn't bother me though: I just wanted to make the site a little more Awesome. Oh, and, come play "Werewolf":http://werewolfnight.org!

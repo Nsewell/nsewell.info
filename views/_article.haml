@@ -1,0 +1,15 @@
+%div[article]
+  %h1
+    %a{:href => article_path(article)}= article.title
+  .content
+    = render_article(article)
+
+  .footer
+    - if prev = previous_article(article)
+      %a.previous{:href => article_path(prev)}
+        %span.arrow &larr;
+        Previous article
+    - if nxt = next_article(article)
+      %a.next{:href => article_path(nxt)}
+        Next
+        %span.arrow &rarr;

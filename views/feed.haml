@@ -1,25 +1,25 @@
 !!! xml
-%feed{:xmlns => "http://www.w3.org/2005/Atom"}
- 
-  %title Josh Price
-  %link{:href => "http://blog.joshprice.com/articles.atom", :rel => "self", :hreflang => "en", :type => "application/atom+xml"}/
-  %link{:href => "http://blog.joshprice.com", :rel => "alternate", :hreflang => "en", :type => "text/html"}/
-   
+%feed{:xmlns => 'http://www.w3.org/2005/Atom'}
+  %title The Lincolnshire Poacher
+  %link{:href => 'http://thelincolnshirepoacher.com/feed.atom', :rel => 'self', :hreflang => 'en', :type => 'application/atom+xml'}/
+  %link{:href => "http://thelincolnshirepoacher.com", :rel => "alternate", :hreflang => "en", :type => "text/html"}/
+
   %author
-    %name Josh Price
-    %uri http://joshprice.com
-    %email josh@joshprice.com
- 
-  %id http://joshprice.com
+    %name Chris Lloyd
+    %uri http://chrislloyd.com.au
+    %email christopher.lloyd@gmail.com
+
+  %icon http://thelincolnshirepoacher.com/favicon.ico
+
+  %id tag:thelincolnshirepoacher.com,2009-10-08:/
   %updated= @articles.first.published.xmlschema
- 
-  - @articles[0..10].each do |article|
+
+  - @articles.each do |article|
     %entry
-      %id http://blog.joshprice.com/#{article.slug}
-      %title{:type => "html"}= article.title
+      %id== tag:thelincolnshirepoacher.com,#{article.published.strftime('%Y-%m-%d')}:#{article_path(article)}
+      %title{:type => "html"}= strip_tags(article.title)
       %published= article.published.xmlschema
       %updated= (article.updated || article.published).xmlschema
-      %link{:href => "http://blog.joshprice.com/#{article.slug}", :rel => "alternate", :hreflang => "en", :type => "text/html"}/
-      %content{:type => "xhtml", "xml:lang"=>"en", "xml:base"=>"http://blog.joshprice.com/"}
-        %div{:xmlns => "http://www.w3.org/1999/xhtml"}
-          = haml article.template, :layout => false
+      %link{:href => "http://thelincolnshirepoacher.com#{article_path(article)}", :rel => 'alternate', :hreflang => 'en', :type => 'text/html'}/
+      %content{:type => 'xhtml', 'xml:lang' => 'en', 'xml:base' => 'http://thelincolnshirepoacher.com'}
+        %div{:xmlns => "http://www.w3.org/1999/xhtml"}= absoluteify_links(render_article(article))

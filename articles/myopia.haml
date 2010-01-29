@@ -1,0 +1,26 @@
+-# title: Myopia
+-# published: 2009-7-15 10:00
+-# tumblr: 141718757
+
+= figure 'millais-blind-girl.jpg', :caption => "Millais' “Blind Girl” (1856) — A blind girl enjoys the sun's warmth, oblivious to the approaching storm.", :alt => "Millais' “Blind Girl” (1856)", :link => 'http://upload.wikimedia.org/wikipedia/commons/e/e8/Millais-Blind_Girl.jpg'
+
+:markdown
+  I love this picture. You should go have a [look at it large](http://upload.wikimedia.org/wikipedia/commons/e/e8/Millais-Blind_Girl.jpg). Millais was one of the founders of the Pre-Raphaelites, a group who believed that taking a classical approach to art was bullshit. Casting aside brilliant colours and chiselled six-packs, they drew women in awkward compositions with dirty dresses truthfully depicting nature. *Blind Girl* is great because it strikes me as so genuine. The detail of the blind girls hand, gently touching the grass really conveys the warmth of the Sun too. It's one of those serene moments where nothing else matters except the present.
+
+  The parable of the blind girl and the storm can be applied to software engineering. Development practices these days encourage wearing blinkers while programming (BDD, Agile to name a couple). As programmers we naturally abstract problems to the _n<sup>th</sup> degree_, thinking outside of the immediate challenge to a generic solution. The problem with thinking in abstractions is that we tend to think abstractly. A generic solution *always* answers a different question than what was originally asked. But gosh, I'm a fiend for over-engineering solutions. It's fucking *fun* to play with technology. Look at it whirl!
+
+  My latest hobby, however, has been knocking that whirling candy right out of my hands. I've been walking through crowded places with my eyes closed and headphones blaring. Blind and totally deaf, I can only concentrate on where my feet are going and the sun on my face (unless I'm walking inside, of course). I've been calling this "blind walking". Your Mum will tell you it's a stupid idea (she told me so last night) but she assumes everybody else is deaf and dumb as well. The reality is that people see you and move out of your way. Largely, this is a confidence thing. You have to be confident if you don't know where you're going because that is all you have. I've been blind walking every day for the last couple of weeks and I _haven't hit anybody yet_.
+
+  But back to the regular programming. We constantly create unrealistic scenarios that *could* happen in the future. Take, for instance, the problem of including a specific version of a library in Ruby. A common Ruby idiom is to do so like this:
+
+  <pre><code class="ruby">{ 'activesupport' => '2.3.2',
+    'activerecord'  => '2.3.2',
+    'sinatra'       => '0.9.2',
+    'fancypath'     => '0.5.12'
+  }.each{|g,v| gem(g,v); require(g)}</code></pre>
+
+  rather than to explicitly requiring each Gem. For the most part this is a good solution to the original problem. However, in the case where the Gem name is different to the library name (like the `openrain-action_mailer_tls`) this solution doesn't work. Rather than just requiring each Gem by hand I created an imaginary situation where there would be so many gems I would require a shorthand to require them. By trying to predict the future I missed the edge case of Gem's with mismatched names. This is a pretty trivial example, but the point I'm trying to distil here is that you cannot predict the future, so don't bother trying.
+
+  Hold on, what is here that isn't in an article on [YAGNI](http://c2.com/xp/YouArentGonnaNeedIt.html) or sleepwalking? I've been learning to _deliberately ignore_ a *certain* future for the benefit of the present. There is no stopping the storm from hitting the blind girl and I knew I would require enough gems that a shortcut was useful (though that could be another topic). You have to act when, and only when an event occurs, not a moment sooner. Everything is a guess until it happens. In the previous example, had I acted once I did have alot of gems, I would have looked at the *entire* situation and taken the edge case of gems with weird library names into into account. YAGNI is about trying to predict the future to save time in the present whereas I believe you can't concern yourself with anything that you don't know for certain.
+
+  The two most delightful qualities we (surreptitiously) attribute to good programmers, laziness and cockiness, lend themselves very well to this seeking of immediate happiness and disregard for everything else. Laziness in the sense that it encourages you to only act at the last possible moment. Cockiness is essential as you need to believe that your decisions are correct for them to actualise the desired future. Like Millais, a successful programmer casts aside distracting personal phantasms and seeks out only the truth in their situation.
