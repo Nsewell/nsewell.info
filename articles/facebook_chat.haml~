@@ -1,0 +1,15 @@
+-# title: Facebook Chat Goes Jabber
+-# published: 2010-02-13
+-# tags: web
+  
+
+:textile
+  Before the days of SMTP and sendmail, proprietary email systems couldn't interoperate. Nowadays, the idea that you've got to make sure that your email is in a format that the other person can open is pretty much a foreign concept. There's still a few minor issues like HTML or the outlook system of using quotes as attachments not appearing right in archaic email clients, but that's rare.
+
+  Good news is, Facebook now "supports Jabber":http://www.facebook.com/sitetour/chat.php which is open source and works with Pidgin, one of the most popular instant messaging programs that's cross platform. Facebook on Pidgin is great, because it combines the widespread (Microsoft would call it "legacy") Facebook web platform that a lot of my friends use often, with a desktop app experience. I often found Facebook chat unbearable, as every time I'd have to bring up the whole browser window and switch to the right tab every time I heard the annoying clicking sound (speaking of which, you'll want to disable Pidgin sounds and notifications. It's for your own good.) Having a nice, tabbed native app is a real plus, so much so that IM is something I could seriously consider as a useful way to reach people. Usually sending an email to an under 25 year old who's a non-geek means you'll be lucky to get a reply in 2-3 days. It's frustrating when I use a desktop app with quick replies to other people (when I'm in a good mood), and not getting the same level of connection. It's that kind of frustration that led me to getting a phone, which turns out to be a mistake (you have to pay for the privilege of access to underpowered email with a crappy keypad. Maybe a better phone one day will sway me. Or just mobile broadband with SMS). 
+
+  Coming back to the intro, I really hope that the future of web apps is open collaboration, with the user free to choose their provider/interface of choice, and to have different native apps for the desktop, phones, and the ever increasing plethora of devices in between (though I do hope that this has limits. An actual digital feminine hygene product is just too wrong). Despite Zuckerburg's deranged mumblings to the effect that people everywhere should have no control over who knows what("FREEDOM IS SLAVERY"), Facebook has made a move for the better that will probably genuinly useful to me, and sets a precedent for a more open and useful internet.
+
+
+
+
