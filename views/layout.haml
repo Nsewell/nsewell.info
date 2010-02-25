@@ -5,8 +5,8 @@
     %meta(http-equiv="content-type" content="text/html" charset="utf-8")
     %meta(http-equiv="content-language" content="en")
     %meta(author="Nick Sewell")
-    %meta(name="description" content="Josh Price is an Agile Software Developer and Consultant based in Sydney. He has a passion for all things software related. His great love is the Ruby language and it's wonderful community.")
-    %meta(name="keywords" content="Nick Sewell, Sydney, Australia")
+    %meta(name="description" content="Nick Sewell is a student at the uni of sydney, interested in ruby.")
+    %meta(name="keywords" content="Nick Sewell, Sydney, Australia, ruby, python")
 
     -# %link(rel="icon" href="images/avatar.png")
     %link(href="/stylesheets/screen.css" type="text/css" rel="stylesheet")
@@ -28,15 +28,13 @@
           %ul
             - @articles.each do |article|
               %li
-                %a{:href => article.slug}=article.title
+                %a{:href => article_path(article)}=article.title
                 
         .blogroll
           
         #about
           %h3 About
-          -# %a{:href => 'colophon.haml'}="colophon"
-          I'm a programmer in Sydney.
-          %a{:href => "http://github.com/nsewell"}Github
+          %a{:href => 'colophon'} About me and this site
         
         #twitter
           %h3 Twitter

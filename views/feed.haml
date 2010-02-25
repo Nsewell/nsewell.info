@@ -2,24 +2,23 @@
 %feed{:xmlns => "http://www.w3.org/2005/Atom"}
  
   %title Josh Price
-  %link{:href => "http://blog.joshprice.com/articles.atom", :rel => "self", :hreflang => "en", :type => "application/atom+xml"}/
-  %link{:href => "http://blog.joshprice.com", :rel => "alternate", :hreflang => "en", :type => "text/html"}/
+  %link{:href => "http://www.nsewell.info/articles.atom", :rel => "self", :hreflang => "en", :type => "application/atom+xml"}/
+  %link{:href => "http://www.nsewell.info", :rel => "alternate", :hreflang => "en", :type => "text/html"}/
    
   %author
-    %name Josh Price
-    %uri http://joshprice.com
-    %email josh@joshprice.com
+    %name Nick Sewell
+    %uri http://www.nsewell.info
  
-  %id http://joshprice.com
+  %id http://www.nsewell.info
   %updated= @articles.first.published.xmlschema
  
   - @articles[0..10].each do |article|
     %entry
-      %id http://blog.joshprice.com/#{article.slug}
+      %id http://www.nsewell.info#{article_path(article)}
       %title{:type => "html"}= article.title
       %published= article.published.xmlschema
       %updated= (article.updated || article.published).xmlschema
-      %link{:href => "http://blog.joshprice.com/#{article.slug}", :rel => "alternate", :hreflang => "en", :type => "text/html"}/
-      %content{:type => "xhtml", "xml:lang"=>"en", "xml:base"=>"http://blog.joshprice.com/"}
+      %link{:href => "http://www.nsewell.info/#{article_path(article)}", :rel => "alternate", :hreflang => "en", :type => "text/html"}/
+      %content{:type => "xhtml", "xml:lang"=>"en", "xml:base"=>"http://www.nsewell.info"}
         %div{:xmlns => "http://www.w3.org/1999/xhtml"}
           = haml article.template, :layout => false

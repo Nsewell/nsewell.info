@@ -2,8 +2,33 @@
 -# published: 2010-01-29
 -# tags: blog
 
-:markdown
+%h2 About Nick Sewell
+:textile
+  I'm a programmer in Sydney. You can follow stuff on "GitHub":http://github.com/nsewell I'm interested in technologies and ideas like Agile that enable programmers to make things better.  
 
-  Blah, blah, blah. This is a blog. Sort of.
+%h2 About the site 
+:textile
+  This site is hosted on Heroku (Amazon EC2) running Tim Lucas's Sinatra blog engine. The source code is available at "GitHub":http://github.com/nsewell/nsewell.info. The content is under This work is licensed under a "Creative Commons Attribution-Noncommercial-Share Alike 2.5 Australia License":http://creativecommons.org/licenses/by-nc-sa/2.5/au/
 
-  [1]: http://www.github.com
+%h2 Feedback
+Got feedback on the site or any post? I'd like to hear it (+ or -)
+%form{ :action => "", :method => "post"}
+  %fieldset
+    %ol
+      %li
+        %label{:for => "name"} Name:
+        %input{:type => "text", :name => "name", :class => "text"}
+      %li
+        %label{:for => "mail"} email (for replies):
+        %input{:type => "text", :name => "mail", :class => "text"}
+      %li
+        %label{:for => "body"} Message:
+        %textarea{:name => "body"}
+    %input{:type => "submit", :value => "Send", :class => "button"}
+
+  
+
+
+
+
+

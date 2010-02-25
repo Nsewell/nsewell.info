@@ -6,6 +6,6 @@
     %changefreq daily
   - @articles.each do |article|
     %url
-      %loc== http://nsewell.info/#{article.slug}
+      %loc== http://nsewell.info/#{article_path(article)}
       %priority 0.6
       %changefreq monthly
