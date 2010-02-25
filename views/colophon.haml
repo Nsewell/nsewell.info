@@ -14,16 +14,17 @@
 Got feedback on the site or any post? I'd like to hear it (+ or -)
 %form{ :action => "", :method => "post"}
   %fieldset
-    %ol
+    %ul
       %li
-        %label{:for => "name"} Name:
+        %label{:for => "name"} Name               :
         %input{:type => "text", :name => "name", :class => "text"}
       %li
-        %label{:for => "mail"} email (for replies):
+        %label{:for => "mail"} Email (for replies):
         %input{:type => "text", :name => "mail", :class => "text"}
       %li
-        %label{:for => "body"} Message:
+        %label{:for => "body"} 
         %textarea{:name => "body"}
+    Thanks. Submitting might take a moment.
     %input{:type => "submit", :value => "Send", :class => "button"}
 
   
