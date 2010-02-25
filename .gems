@@ -1,2 +1,4 @@
 rdiscount --version=1.3.5
 compass
+pony
+smtp_tls
