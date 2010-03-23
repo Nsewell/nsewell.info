@@ -1,0 +1,45 @@
+-# title: Analysing sequenced yeast DNA
+-# published: 2010-03-23
+-# tags: bioinformatics
+  
+:textile
+  Today I had the pleasure of working with "@garrydanger":http://twitter.com/garrydanger and "@andrewjgrimm":http://twitter.com/andrewjgrimm to hack on a tool that is the basis of a system to process sequenced yeast DNA and note similarities between parts. The yeast DNA is a fairly large dataset, with around 12 million bases, but much smaller than the human genome, having over 3 billion nucleotide bases. 
+
+  There's an idea that given a shifting frame of 25 bases, each of the frames produced can be compared to each other, and coincidental repetition at that level is unlikely (especially 25 bases worth of repetition). Each nucleotide base has 4 possibilities (Adenine, Thyamine, Guanine, Cytocine). They are usually represented by plain ascii text, using 4 times the required space. In order to compare the sequences, hashing algorithms were suggested, but the simplest solution was that I wrote a tool to do manual repretentation of the nucleotide arrays to integers, by assigning each of the base pairs a binary sequence.
+
+  This may seem slightly complicated if you have no background in biology or computer science. The following is some sample output
+
+  <pre>AGTAGTGGCTCACACTCATGCGGGTGCTATGA 2082728404103093556
+  GTAGTGGCTCACACTCATGCGGGTGCTATGAT 14355740156307937101
+  TAGTGGCTCACACTCATGCGGGTGCTATGATA 3588935039076984275
+  AGTGGCTCACACTCATGCGGGTGCTATGATAC 10120605796624021876
+  GTGGCTCACACTCATGCGGGTGCTATGATACA 2530151449156005469
+  TGGCTCACACTCATGCGGGTGCTATGATACAA 632537862289001367
+  GGCTCACACTCATGCGGGTGCTATGATACAAT 13993192520854414053
+  GCTCACACTCATGCGGGTGCTATGATACAATG 8109984148640991417
+  CTCACACTCATGCGGGTGCTATGATACAATGG 6639182055587635758
+  TCACACTCATGCGGGTGCTATGATACAATGGC 10883167550751684747
+  CACACTCATGCGGGTGCTATGATACAATGGCA 2720791887687921186
+  ACACTCATGCGGGTGCTATGATACAATGGCAT 14515256027204144008
+  CACTCATGCGGGTGCTATGATACAATGGCATC 12852186043655811810
+  ACTCATGCGGGTGCTATGATACAATGGCATCC 12436418547768728760
+  CTCATGCGGGTGCTATGATACAATGGCATCCT 16944162692224345902
+  TCATGCGGGTGCTATGATACAATGGCATCCTA 4236040673056086475
+  CATGCGGGTGCTATGATACAATGGCATCCTAT 14894068223546185330
+  ATGCGGGTGCTATGATACAATGGCATCCTATT 17558575111168710044
+  TGCGGGTGCTATGATACAATGGCATCCTATTT 18224701833074341223
+  GCGGGTGCTATGATACAATGGCATCCTATTTC 13779547495123361113
+  CGGGTGCTATGATACAATGGCATCCTATTTCC 12668258910635616086
+  GGGTGCTATGATACAATGGCATCCTATTTCCA 3167064727658904021
+  GGTGCTATGATACAATGGCATCCTATTTCCAT 14626824237196889717
+  GTGCTATGATACAATGGCATCCTATTTCCATT 17491764114581386141
+  TGCTATGATACAATGGCATCCTATTTCCATTC 13596313065500122343
+  GCTATGATACAATGGCATCCTATTTCCATTCC 12622450303229806393
+  CTATGATACAATGGCATCCTATTTCCATTCCC 12378984612662227406
+  TATGATACAATGGCATCCTATTTCCATTCCCA 3094746153165556851</pre>
+
+
+  It's amazing (and sometimes frustrating) how quickly time runs out at these kind of events, especially when time is used up in deciding exactly what to do and how to go about doing it.   
+
+
+
