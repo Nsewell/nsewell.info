@@ -1,6 +1,10 @@
 @import base.sass
- 
 +blueprint
+
+@font-face 
+  font-family: "FFNuvo Web"
+  src: url("../css/NuvoWeb-Medi.eot")
+  src: url("../css/NuvoWeb-Medi.woff") format("woff")
 
 body
   :font-family Helvetica, Arial, sans, serif
@@ -14,7 +18,7 @@ a:hover
   :color #979
 
 pre, code, tt
-  :font-family monaco, monospace
+  :font-family "droid sans mono", "anonymous pro", "andale mono", "inconsolata", "bitstream vera sans mono", monaco, "consolas", "courier new", monospace
   //:background #444
   //:color #eee
   //:border 2px solid #888
@@ -36,7 +40,7 @@ h2, h3, h4
   :margin-bottom 2em
   h1
     :margin-bottom 0
-    :font-family "Linux Biolinum O", Georgia, "Times New Roman", times, serif
+    :font-family "FFNuvo Web", "Linux Biolinum O", Georgia, "Times New Roman", times, serif
     a
       :color #666
       :letter-spacing -1px
@@ -89,3 +93,65 @@ h2, h3, h4
     
     
   
+.CodeRay
+  background-color: #232323
+  border: 1px solid black
+  font-family: 'Bitstream Vera Sans Mono', 'Courier New', 'Terminal', monospace
+  color: #E6E0DB
+  padding: 3px 5px
+  overflow: auto
+  font-size: 12px
+  margin: 12px 0
+
+  pre
+    margin: 0px
+    padding: 0px
+
+  .an
+    color: #E7BE69 
+
+  .c
+    color: #BC9358
+    font-style: italic
+
+  .ch
+    color: #509E4F 
+
+  .cl, .co
+    color: #FFF 
+
+  .fl
+    color: #A4C260 
+
+  .fu
+    color: #FFC56D 
+
+  .gv
+    color: #D0CFFE 
+
+  .i
+    color: #A4C260 
+
+  .il
+    background: #151515 
+
+  .iv
+    color: #D0CFFE 
+
+  .pp
+    color: #E7BE69 
+
+  .r
+    color: #CB7832 
+
+  .rx, .s
+    color: #A4C260 
+
+  .sy
+    color: #6C9CBD 
+
+  .ta
+    color: #E7BE69 
+
+  .pc
+    color: #6C9CBD

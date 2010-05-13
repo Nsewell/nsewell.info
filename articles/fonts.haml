@@ -1,0 +1,48 @@
+-# title: The quest for quality monospace fonts
+-# published: 2010-05-12
+-# tags: programming, ruby
+  
+:markdown
+
+this is some text
+
+Which fonts are good and which should be avoided is an issue that usually graphic designers going. It's understandible, fonts are a part of their livelihood. Programmers, as well, can get excited about monospaced fonts, and arguably they should, with a quality monospaced font, along with a good syntax colouring scheme being a help to spending a long time looking at a screen. There are a few good articles that look at which fonts individuals think are the best, and I'm going to add to it with a few images from some real code, Tim Lucas's Article class for this Sinatra blog.
+
+Starting off, here's one of my favourites, Inconsolata, inspired by Lucas de Groot's 2007 Microsoft font Consolas.
+
+= figure 'inconsolata.png', :alt => 'Inconsolata'
+
+Inconsolata has generally recieved good reviews. Here I show it in vim with the xoria256 colour scheme (a great scheme that I feel gets contrast right for most screens, with more contrast than Zenburn, but not as much as some of the primary coloured themes). Inconsolata has an old style lower case G, and a backslashed zero.
+
+At number two, I'd put the general Linux default DejaVu Sans Mono, based on Bitstream Vera Sans, which the current Mac OSX default, Menlo, is based. More fonts, including Panic sans, that comes with a Mac editor, are based on DejaVu Sans Mono. 
+
+= figure 'dejavusansmono.png', :alt => 'DejaVu Sans Mono'
+
+As you can see, DejaVu Sans Mono is a larger, easily readible font at higher point sizes. It has a dotted zero.
+
+Next is Monaco
+
+= figure 'monaco.png', :alt => 'Monaco'
+
+Monaco is the older Mac default font. It should be used as a fallback after Menlo.
+
+= figure 'anonymouspro.png', :alt => 'Anonymous Pro'
+
+One last font worth considering is Anonymous Pro, based on Anonymous, which was popular on Windows for a time.
+
+Note; I may add more fonts here to discuss in future. The first two are generally the best. Droid Sans Mono is another free font that ships with Android. It has an issue with its zero looking very similar to its capital O. Because the font is apache licenced, some people have released custom versions, with a dot or slash added to the zero glyph to make it more readible.
+
+To me, Apple's selection of DevaVu Sans Mono to base Menlo off is a good endorsment of the venerable Linux default. Anyone wanting a change should give Inconsolata a try, with a smaller and more retro feel. When using web fonts, due to different operating systems, I'd recommend listing a few fallback fonts, prefering the clear fonts like Droid Sans Mono, Menlo, DevaVu Sans Mono, Bitstream Vera Sans, and then falling back to some of the older fonts, like Monaco, Consolas, and then the ugly fonts, courier new, monospace (the monospace default may be mapped to a boring/ugly one).
+
+
+:preserve
+<div class="CodeRay">
+<pre>
+require <span class="s"><span class="dl">'</span><span class="k">sinatra</span><span class="dl">'</span></span>
+ 
+get <span class="s"><span class="dl">'</span><span class="k">/</span><span class="dl">'</span></span> <span class="r">do</span>
+<span>  </span><span class="s"><span class="dl">&quot;</span><span class="k">Hello World!</span><span class="dl">&quot;</span></span>
+<span class="r">end</span>
+</pre>
+</div>
+

@@ -1,4 +1,3 @@
-# Borrowed straight from http://github.com/toolmantim/toolmantim/tree/master
 class Article
   def self.path=(path)
     @path = path

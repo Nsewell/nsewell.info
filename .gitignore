@@ -1,3 +1,4 @@
 *~
 *.swp
 .sass_cache
+email.rb
