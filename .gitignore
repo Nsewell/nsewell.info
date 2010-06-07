@@ -2,3 +2,5 @@
 *.swp
 .sass_cache
 email.rb
+unpublished/*
+dev/*
